@@ -3,23 +3,160 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f6f6f6"
     android:gravity="top">
-    <EditText
-        android:id="@+id/edit_text_content"
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:src="@drawable/pdfimage"
+        android:padding="5dp"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="top"
-        android:hint="Enter your content..."
-        android:inputType="textMultiLine"
-        android:layout_margin="5dp"
-        android:padding="20dp"
-        android:lines="5"
-        >
-    </EditText>
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DOCUMENT Name:"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_weight="70"/>
+
+        <EditText
+            android:id="@+id/edit_file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:layout_weight="30"
+            android:backgroundTint="@color/colorPrimary"
+            >
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="DOCUMENT Title:"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:layout_weight="30"
+            android:backgroundTint="@color/colorPrimary"
+            >
+        </EditText>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:paddingLeft="30dp"
+        android:padding="5dp"
+        android:text="DOCUMENT Content:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/edit_text_content"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="10"
+            android:background="@drawable/editextbackground"
+            android:backgroundTint="#fceae8"
+            android:fontFamily="monospace"
+            android:gravity="start"
+            android:hint="Enter your content..."
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:padding="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="90"
+            android:orientation="vertical"
+            >
+
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/ic_attach_file_black_24dp"-->
+                <!--android:gravity="left"-->
+                <!--android:id="@+id/attach_Img"-->
+                <!--android:padding="5dp"-->
+                <!--/>-->
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_format_bold_black_24dp"
+                android:gravity="left"
+                android:id="@+id/bold_Img"
+                android:padding="5dp"
+                />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_format_italic_black_24dp"
+                android:gravity="left"
+                android:id="@+id/italic_Img"
+                android:padding="5dp"
+
+                />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_format_underlined_black_24dp"
+                android:gravity="left"
+                android:id="@+id/underline_Img"
+                android:padding="5dp"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
     <Button
         android:id="@+id/button_create"
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:background="@drawable/roundedbutton"
+        android:padding="5dp"
+        android:drawableRight="@drawable/ic_create_black_24dp"
         android:text="Create PDF"/>
 </LinearLayout>
